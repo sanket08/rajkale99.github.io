@@ -194,7 +194,137 @@
 
     </header>
 
+<div class="container">
 
+    <!-- Modal -->
+
+          <!--Modal: Contact form-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+
+           <div class="modal-header light-blue darken-3 white-text">
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="change-mfont"><i class="fa fa-pencil"></i> Please provide Info</h4>
+            </div>
+
+
+             <!--<form enctype="multipart/form-data" role="form" action="" method="POST">-->
+                 <!--<input type='hidden' name='csrfmiddlewaretoken' value='8PyUM87pGCRYzA45d9lc8Z8apArCe5mvOlV5NVxFybQpbNveuXOSHbewp9i5FL3z' />-->
+
+                 <input type="hidden" id="order_type" name="order_type" value="">
+
+            <!--Body-->
+            <div class="modal-body mb-0">
+                <div class="md-form form-sm">
+                    <i class="fa fa-user prefix"></i>
+                    <label for="form19">Your name</label>
+                    <input type="text" name="name" id="userName" class="form-control validate">
+                    <div class="change1"> </div>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input type="email" name="email" id="email" class="form-control validate">
+                    <label for="form20">Your email</label>
+                    <div class="change2"> </div>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-link prefix"></i>
+                    <input type="text" name="app_url" id="appLink" class="form-control validate">
+                    <label for="form21">App Link</label>
+                    <div class="change3"> </div>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-pencil prefix"></i>
+                    <textarea type="text" id="message" name="message" class="md-textarea mb-0"></textarea>
+                    <label for="form8">Your Message</label>
+                </div>
+
+                <div class="text-center mt-1-half">
+                    <button class="btn btn-info mb-2 msend" data-toggle="modal" type="submit" id="sendButton"> Send <i class="fa fa-send ml-1"></i></button>
+                </div>
+                <h5 id="collapse">Setting your details...</h5>
+                <div id="myProgress">
+                  <div id="myBar"></div>
+                </div>
+
+            </div>
+
+
+             <!--</form>-->
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Contact form-->
+
+
+
+</div>
+
+
+    <!--try different modal -->
+
+        <!--Modal: Subscription From-->
+<div class="modal fade" id="modalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+
+                 <img src="images/logo-x.png" alt="logo-pic">
+            </div>
+            <!--Body-->
+            <div class="modal-body mb-0">
+                <h3 class="order-confirm">Confirm Your Order</h3>
+               <div class="row">
+                    <div class="col-xs-4 confirm-page-first-col">
+                        <h5 class="col-space">Name :</h5>
+                        <h5 class="col-space">E-mail :</h5>
+                        <h5 class="col-space">AppLink :</h5>
+                        <h5 class="col-space">Message :</h5>
+                   </div>
+                   <div class="col-xs-8">
+                        <h5 class="col-space" id="putName"></h5>
+                        <h5 class="col-space" id="putEmail"></h5>
+                        <h5 class="col-space" id="putApplink"></h5>
+                        <h5 class="col-space" id="messagelink"></h5>
+                   </div>
+
+                </div>
+
+                <div class="text-center mt-1-half" id="render-paypal-button">
+                      <!---->
+                    <div id="gif-loader">
+                    <img src="images/loading.gif" alt="logo-pic">
+                        </div>
+                   <!--<img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/silver-rect-paypalcheckout-44px.png" alt="PayPal Checkout" class="confirm-page-btn-submit">-->
+                </div>
+
+                <div class="text-center mt-1-half">
+
+                    <!--<a id="instamojo" href="#" rel="im-checkout" data-behaviour="remote" data-style="flat" data-text="Checkout With Instamojo" target="_blank"></a>-->
+
+                    <a id="instamojo" href="#" target="_blank"><input width="224" height="44" type="image" src="images/pay-now-instamojo.png"></a>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
     <!-- try different modal ends here -->
 
   <div class="text-center wrap">
@@ -269,9 +399,8 @@ Bank Transfer and other options available on request.">p</button>
                             </li>
 
                             <li class="plan-action">
-<a href="https://www.instamojo.com/@rajkale99/le2f5e009955e4456984ea65b519242ce/" rel="im-checkout" data-behaviour="remote" data-style="flat" data-text="BUY"></a>
-<script src="https://js.instamojo.com/v1/button.js"></script>
-			
+<button type="button" onclick="androidBase()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="android-base">BUY</button>
+		
                                 <a type="button" class="pop-data" data-toggle="popover" data-content="Delivery time: 24 Hours
 Email: thckrd.p02@gmail.com for any support
 Bank Transfer and other options available on request." style="float:right;"><img src="fonts/info.svg" alt="info icon" width="20px" height="20px" style="float:right;"></a>
@@ -324,7 +453,8 @@ Bank Transfer and other options available on request." class="infobtngrowth"><fo
 
                             <li class="plan-action">
 
-<a href="https://form.jotform.me/90956960419469" class="btn" btn-default">Buy</a>
+               <button type="button" onclick="androidGrowth()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">BUY</button>
+
                                 <a type="button" class="pop-data" data-toggle="popover" data-content="Delivery time: 48 Hours
 Email: thckrd.p02@gmail.com for any support
 Bank Transfer and other options available on request." style="float:right;"><img src="fonts/info.svg" alt="info icon" width="20px" height="20px" style="float:right;"></a>
@@ -369,7 +499,8 @@ Bank Transfer and other options available on request." class="infobutton"><font 
                             <li class="plan-action">
 
 
-<a href="https://form.jotform.me/90956914058467" class="btn" btn-default">Buy</a>
+               <button type="button" onclick="androidGrowth()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">BUY</button>
+
 
                        <a type="button" class="pop-data" data-toggle="popover" data-content="Delivery time: 6 Days
 Email: thckrd.p02@gmail.com for any support
